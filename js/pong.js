@@ -71,7 +71,7 @@ function bounce() {
 //movement
 //moves paddle
 function paddleMovement() {
-	if(paddleY + offset != Math.ceil(finalprediction / 5) * 5) {
+	if(paddleY + offset != Math.ceil(finalprediction / movement) * movement) {
 		if(paddleY + offset < finalprediction){
 			paddleY += movement;
 		} else if(paddleY + offset > finalprediction) {
@@ -136,6 +136,18 @@ function predictionBounce() {
 		predictionSpeedX *= -1;
 	}
 }
+
+function mouseClicked() {
+	console.log('clickedBall');
+	ballSpeedX *= Math.floor(Math.random()*1)-1;
+	ballSpeedY *= Math.floor(Math.random()*1)-1;
+	window.setTimeout(function(){
+		needPrediction = true;
+		predictionStarted = false;
+	}, 100);
+}
+
+
 function prediction() {
 	fill('red');
 	ellipse(predictionX, predictionY, diameter, diameter);
@@ -149,7 +161,7 @@ function prediction() {
 			offset = (Math.floor(Math.random()*8) + 4) * movement;
 			console.log()
 		}
-		if(predictionX - paddleWidth <= paddleX) {
+		if(predictionX - paddleWidth/2 <= paddleX) {
 			finalprediction = predictionY;
 			finalpredictionX = predictionX;
 			needPrediction = false;
@@ -192,10 +204,10 @@ function draw() {
 	fill('white');
 	animation();
 	paddleMovement();
-	ballMovement();
 	wallCollision();
 	paddleCollision();
 	predictionBounce();
+	ballMovement();
 	prediction();
 }
 
