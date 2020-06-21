@@ -13,7 +13,7 @@ body {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	font-family: Asap;
+	font-family: Asap, sans-serif;
 	font-size: 100px;
 	transform: translateX(-50%) translateY(-50%);
 	color: #424a42;
