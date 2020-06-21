@@ -9,6 +9,10 @@ body {
 }
 
 #title {
+	-webkit-user-select: none; 
+	-moz-user-select: none;     
+	-ms-user-select: none;    
+	user-select: none; 
 	position: absolute;
 	left: 50%;
 	top: 50%;
