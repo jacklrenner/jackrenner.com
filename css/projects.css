@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Oxygen+Mono&family=Varela+Round&display=swap');
-
 * {
 	margin: 0;
 	padding: 0;
@@ -42,4 +40,14 @@ a:hover {
 	color: white;
 	float: right;
 	text-decoration: none;
+}
+
+#projects {
+	width: 1000px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: white;
 }
