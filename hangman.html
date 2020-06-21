@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="styles/hangman.css">
+</head>
+
+<body>
+
+<nav>
+  
+  <p><a href="index.html">Jack Renner</a></p>
+  <ul>
+    <li><a href="#">Javascript</a>
+      <ul>
+        <li><a href="hangman.html">Hangman</a></li>
+        <li><a href="#">Snake</a></li>
+        <li><a href="#">Rock Paper Scissors</a></li>
+      </ul>
+    </li>
+    <li><a href="#">About me</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+  <h5 id='word'>_</h5>
+
+  <div id='char'>
+    <img id='charImage' src="images/char/char0.6.png">
+  </div>
+
+  <h3 id="lettersleft"><h3>
+
+  <div id='inputDiv'>
+    <form id='inputForm' onsubmit='guess(document.getElementById("inputBox").value); return false;'>
+      <input  autocomplete='off' id='inputBox' type='text' maxlength='1'/>
+    </form>
+  </div>
+</body>
+<script src="scripts/game.js"></script>
+<script src="scripts/char.js"></script>
+</html>
