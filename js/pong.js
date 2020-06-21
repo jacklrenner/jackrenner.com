@@ -189,7 +189,6 @@ function setup() {
 
 function draw() {
 	resize();
-	background('#1b1f1b');
 	fill('white');
 	animation();
 	paddleMovement();
