@@ -106,11 +106,9 @@ function failure() {
 	finalprediction;
 	offset;
 
-	document.body.style.backgroundColor = '#990b19';
-	document.getElementById('title').style.display = 'none';
+	document.getElementById('title').style.color = '#990b19';
 	setTimeout(function() {
-		document.body.style.backgroundColor = '#1b1f1b';
-		document.getElementById('title').style.display = 'block';
+		document.getElementById('title').style.color = '#424a42';
 	}, 200);
 }
 //moves ball
