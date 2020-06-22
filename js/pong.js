@@ -210,12 +210,3 @@ function draw() {
 	ballMovement();
 	prediction();
 }
-
-
-
-
-
-
-
-
-

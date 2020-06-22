@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Varela+Round&display=swap');
 
 * {
+	-webkit-user-select: none; 
+	-moz-user-select: none;     
+	-ms-user-select: none;    
+	user-select: none; 
 	margin: 0;
 	padding: 0;
 }
 
 body {
 	background-color: #1b1f1b
-}
-
-#title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	font-family: Asap;
-	font-size: 100px;
-	transform: translateX(-50%) translateY(-50%);
-	color: #424a42;
-	white-space: nowrap;
 }
 
 .link {
@@ -32,6 +25,47 @@ body {
 
 a:hover {
 	color: white;
+	font-size: 38px;
+
+}
+
+#iconContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 50%;
+	height: 25%;
+	background-color: #242924;
+	border-radius: 10px;
+}
+
+#title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: #424A42;
+	font-family: Asap, sans-serif;
+	font-size: 100px;
+}
+
+#js {
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+#py {
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.icon {
+	width: 150px;
+	height: 150px;
 }
 
 .currentLink {

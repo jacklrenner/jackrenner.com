@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Varela+Round&display=swap');
 * {
+	-webkit-user-select: none; 
+	-moz-user-select: none;     
+	-ms-user-select: none;    
+	user-select: none; 	
 	margin: 0;
 	padding: 0;
 }
@@ -9,10 +13,6 @@ body {
 }
 
 #title {
-	-webkit-user-select: none; 
-	-moz-user-select: none;     
-	-ms-user-select: none;    
-	user-select: none; 
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -35,6 +35,7 @@ body {
 
 a:hover {
 	color: white;
+	font-size: 38px;
 }
 
 .currentLink {
