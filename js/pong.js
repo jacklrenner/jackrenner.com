@@ -105,6 +105,13 @@ function failure() {
 	predictionStarted = false;
 	finalprediction;
 	offset;
+
+	document.body.style.backgroundColor = '#990b19';
+	document.getElementById('title').style.display = 'none';
+	setTimeout(function() {
+		document.body.style.backgroundColor = '#1b1f1b';
+		document.getElementById('title').style.display = 'block';
+	}, 200);
 }
 //moves ball
 function ballMovement(){
