@@ -1,5 +1,5 @@
 var canvas;
-
+let bump;
 //scaleable
 const movement = 5;
 //ball
@@ -24,6 +24,12 @@ var needPrediction = true;
 var predictionStarted = false;
 var finalprediction;
 var offset;
+
+
+function preLoad() {
+	soundFormats('mp3');
+	bump = loadSound('sound/bump.mp3');
+}
 
 //draws the ball and paddle
 function animation() {
@@ -66,6 +72,7 @@ function bounce() {
 	bounceAngle = ((ballY-(paddleY+paddleHeight/2))/(paddleHeight/2))*5;
 	ballSpeedY = bounceAngle;
 	ballSpeedX *= -1;
+	bump.play();
 }
 
 //movement
@@ -116,7 +123,7 @@ function ballMovement(){
 	ballX += ballSpeedX;
 	ballY += ballSpeedY;
 }
-  
+
 
 
 
