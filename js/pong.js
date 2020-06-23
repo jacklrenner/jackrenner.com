@@ -26,9 +26,9 @@ var finalprediction;
 var offset;
 
 
-function preLoad() {
+function preload() {
 	soundFormats('mp3');
-	bump = loadSound('sound/bump.mp3');
+	bump = loadSound('sounds/bump.mp3');
 }
 
 //draws the ball and paddle
