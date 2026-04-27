@@ -279,7 +279,7 @@ map.on("click", async (e) => {
     const o3 = pollutantArray.find(p => p.type === "o3")?.value || 0;
     const co = pollutantArray.find(p => p.type === "co")?.value || 0;
 
-    // Scale the values and set ball counts (adjust multipliers as needed)
+    // Scale the values and set ball counts (adjust multipliers as needed) for better visualization
     window.ballCounts = [
       Math.min(pm25 * 20, 500),  // PM2.5
       Math.min(pm10 * 10, 300),   // PM10
