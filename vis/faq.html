@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVST – Why Should I Care?</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/faq.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EVST PROJECT</h1>
+        <a href="../index.html" class="home-btn">Home</a>
+    </header>
+    <div class="page-container">
+        <div class="content-card">
+            <h2></h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Why do I care about air quality?</div>
+                <div class="faq-answer">The most basic reason you should care about air quality is because you presumably have lungs. Because you have lungs, poor air quality puts you at great risk for respitory complications such as: cardiovascular disease, lung cancer, respitory infections, and can worse conditions like athasma.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What impacts air quality?</div>
+                <div class="faq-answer">Humans are not the only thing that impacts air quality. Natural events like wildfires, volcanic eruptions, and dust storms can also contribute to air pollution. However, human activities, in modern times, have reached a point of major global air quality influence. This is primarily through the burning of fossil fuels for industry, transportation, and energy production.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are the consequences of poor air quality?</div>
+                <div class="faq-answer">Air quality has become the second most significant risk factor for death globally. In 2021 8.1 million deaths were attributed to air quality. Predictions estimate annual air quality related mortailty rates to reach 30 million by 2100.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How can I help?</div>
+                <div class="faq-answer">Everybody can contribute something to improving air quality. Some people can spend time working on and advocating for policy change, while others can contribute monetarily to research and air quality initiatives. The most important thing is to contribute whatever way you can that fits you.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Where does this data come from?</div>
+                <div class="faq-answer">The data used in these visualizations comes from a variety of reputable sources, including government agencies, international organizations, and research institutions. Specific sources are cited within each visualization for transparency and accuracy.</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                q.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

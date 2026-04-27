@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVST – Fossil Fuel Visualization</title>
+    <link rel="stylesheet" href="../styles/fossil-fuel.css">
+    <link rel="stylesheet" href="../styles/header.css">
+</head>
+<body>
+    <header>
+        <h1>EVST PROJECT</h1>
+        <a href="../index.html" class="home-btn">Home</a>
+    </header>
+    <main class="split-main">
+        <section class="left-section">
+            <div class="viz-container">
+                <button id="viz-info-btn" onclick="toggleVizInfo()">ℹ️</button>
+                <div id="viz-info-box">
+                    <p>
+                        These amounts are based on figures from <a href="https://www.worldometers.info/energy/">Worldometer</a> energy monitoring <br>
+                        Fossil fuel reserves are based on figures from <a href="https://www.eia.gov/">EIA data</a> <br>
+                        Consumption rates are based on 2019 global energy consumption data from <a href="https://www.iea.org/data-and-statistics">IEA</a> and <a href="https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html">BP Statistical Review.</a>
+
+                    </p>
+                </div>
+                <div id="visualization"></div>
+            </div>
+
+            <div class="reserves-counter-row">
+                <div class="reserve-card" id="oil-card">
+                    <div class="reserve-icon">🛢️</div>
+                    <div class="reserve-label">Oil Reserves</div>
+                    <div class="reserve-value" id="oil-value">Loading...</div>
+                    <div class="reserve-unit">barrels</div>
+                </div>
+                <div class="reserve-card" id="gas-card">
+                    <div class="reserve-icon">🔥</div>
+                    <div class="reserve-label">Natural Gas Reserves</div>
+                    <div class="reserve-value" id="gas-value">Loading...</div>
+                    <div class="reserve-unit">cubic feet</div>
+                </div>
+                <div class="reserve-card" id="coal-card">
+                    <div class="reserve-icon">⚫</div>
+                    <div class="reserve-label">Coal Reserves</div>
+                    <div class="reserve-value" id="coal-value">Loading...</div>
+                    <div class="reserve-unit">short tons</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="right-section">
+            <div class="right-content">
+                <h2>What Are We Comparing?</h2>
+                <p>
+                    This visualization compares the volumes of fossil fuels—oil, natural gas, and coal—against the volume of New York City, with each represented as a cube. 
+                </p>
+                <ul class="legend">
+                    <li><span class="legend-color" style="background:#888"></span> NYC (reference cube)</li>
+                    <li><span class="legend-color" style="background:#e6b800"></span> Oil (100M barrels)</li>
+                    <li><span class="legend-color" style="background:#1f77b4"></span> Natural Gas (11B m³)</li>
+                    <li><span class="legend-color" style="background:#333"></span> Coal (22M tons)</li>
+                </ul>
+                <p class="note">
+                    Volumes are shown to scale using an isometric projection. Hover over each cube for details.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="../js/fossil-fuel.js"></script>
+    <script src="../js/reserves.js"></script>
+    <script>
+        function toggleVizInfo() {
+            const infoBox = document.getElementById("viz-info-box");
+            infoBox.classList.toggle("visible");
+        }
+    </script>
+</body>
+</html>

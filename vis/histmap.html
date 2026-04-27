@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVST – Historical Map</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #E8F5BD;
+            color: #5B7E3C;
+            margin: 0;
+            padding: 0;
+        }
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: calc(100vh - 70px);
+            box-sizing: border-box;
+        }
+        .content-card {
+            background: #1B211A;
+            border: 2px solid #8BAE66;
+            border-radius: 18px;
+            padding: 36px 40px;
+            max-width: 720px;
+            width: 100%;
+            box-shadow: 0 4px 24px rgba(27,33,26,0.18);
+            color: #EBD5AB;
+        }
+        .content-card h2 {
+            color: #8BAE66;
+            margin-top: 0;
+            font-size: 1.6em;
+        }
+        .content-card p {
+            color: #EBD5AB;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .placeholder-map {
+            width: 100%;
+            height: 340px;
+            background: #2a3a28;
+            border-radius: 12px;
+            border: 2px dashed #628141;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8BAE66;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EVST PROJECT</h1>
+        <a href="../index.html" class="home-btn">Home</a>
+    </header>
+    <div class="page-container">
+        <div class="content-card">
+            <h2>🗺️ Historical Map</h2>
+            <p>
+                This page will display an interactive historical map showing how pollution levels 
+                and fossil fuel consumption have changed over time across different regions of the world.
+            </p>
+            <p>
+                Use the map to explore trends, compare countries, and understand how energy use 
+                has evolved since the industrial revolution.
+            </p>
+            <div class="placeholder-map">
+                Map visualization coming soon
+            </div>
+        </div>
+    </div>
+</body>
+</html>

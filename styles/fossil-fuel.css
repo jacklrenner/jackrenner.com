@@ -1,0 +1,227 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #E8F5BD;
+    color: #5B7E3C;
+    margin: 0;
+    padding: 0;
+}
+
+.split-main {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+.left-section, .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.right-section {
+    background: #E8F5BD;
+}
+
+.left-section {
+    background: #A2CB8B;
+    border-right: 1px solid #5B7E3C;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.viz-container {
+    position: relative;
+    width: 100%;
+    flex: 1;
+}
+
+#visualization {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserves-counter-row {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 0 4px 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+#visualization {
+    width: 100%;
+    height: 60vh;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-content {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 32px 28px 28px 28px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(91,126,60,0.07);
+    border: 2px solid #A2CB8B;
+}
+
+.right-content h2 {
+    margin-top: 0;
+    color: #5B7E3C;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.right-content p {
+    font-size: 1.08em;
+    margin-bottom: 1.1em;
+    color: #35521e;
+}
+
+.legend {
+    list-style: none;
+    padding: 0;
+    margin: 1.2em 0 1.2em 0;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7em;
+    font-size: 1em;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    margin-right: 12px;
+    border: 1.5px solid #5B7E3C;
+}
+
+.note {
+    font-size: 0.98em;
+    color: #C44545;
+    margin-top: 1.5em;
+}
+
+.viz-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#viz-info-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #628141;
+    color: #EBD5AB;
+    border: 2px solid #8BAE66;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    box-shadow: 0 2px 8px rgba(27,33,26,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+#viz-info-btn:hover {
+    background: #8BAE66;
+    color: #1B211A;
+    border-color: #EBD5AB;
+}
+
+#viz-info-box {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #1B211A;
+    color: #EBD5AB;
+    border: 2px solid #8BAE66;
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-size: 0.95em;
+    max-width: 280px;
+    box-shadow: 0 4px 18px rgba(27,33,26,0.28);
+    z-index: 20;
+    text-align: left;
+    line-height: 1.5;
+}
+
+#viz-info-box.visible {
+    display: block;
+}
+
+#viz-info-box p {
+    margin: 0;
+    color: #EBD5AB;
+}
+
+.reserves-counter-row {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 0 4px 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.reserve-card {
+    flex: 1;
+    background: rgba(27, 33, 26, 0.95);
+    border: 1px solid rgba(98, 129, 65, 0.4);
+    border-radius: 16px;
+    padding: 14px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 4px 14px rgba(27,33,26,0.2);
+    text-align: center;
+}
+
+.reserve-icon {
+    font-size: 1.6em;
+}
+
+.reserve-label {
+    font-size: 0.78em;
+    color: #8BAE66;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.reserve-value {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #EBD5AB;
+}
+
+.reserve-unit {
+    font-size: 0.72em;
+    color: #8BAE66;
+}

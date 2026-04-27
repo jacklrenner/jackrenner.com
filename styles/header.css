@@ -1,0 +1,78 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+*:not(dialog) {
+  margin: 0;
+}
+
+header {
+
+    margin-top: 0px;
+    padding: 0px;
+    background-color: #5B7E3C;
+    height:50px;
+    border-radius: 0 0 2px 2px;
+    position: relative;  /* or fixed/sticky */
+    z-index: 10;         /* lower than sidebar */
+
+    h1 {
+        font-family: "Saira Stencil", sans-serif;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ...existing code... */
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center children horizontally */
+    padding: 0 32px 0 24px;
+    background: linear-gradient(90deg, #5B7E3C 60%, #A2CB8B 100%);
+    color: #fff;
+    min-height: 64px;
+}
+
+header h1 {
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: none; /* Allows clicks to pass through to the Home button */
+}
+
+.home-btn {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #E8F5BD;
+    color: #5B7E3C;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 22px;
+    border-radius: 22px;
+    box-shadow: 0 2px 8px rgba(91,126,60,0.07);
+    border: 2px solid #A2CB8B;
+    transition: background 0.18s, color 0.18s, border 0.18s;
+    font-size: 1em;
+    pointer-events: auto; /* Ensure the button is clickable */
+}
+
+.home-btn:hover {
+    background: #C44545;
+    color: #fff;
+    border-color: #5B7E3C;
+}
